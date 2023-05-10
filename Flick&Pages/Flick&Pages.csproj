@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Flick_Pages</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\background.png" />
+    <None Remove="Images\books_icon.png" />
+    <None Remove="Images\books_iconOn.png" />
+    <None Remove="Images\books_main.png" />
+    <None Remove="Images\books_main_hover.png" />
+    <None Remove="Images\movies_icon.png" />
+    <None Remove="Images\movies_iconOn.png" />
+    <None Remove="Images\movies_main.png" />
+    <None Remove="Images\movies_main_hover.png" />
+    <None Remove="Images\name_main.png" />
+    <None Remove="Images\shows_icon.png" />
+    <None Remove="Images\shows_iconOn.png" />
+    <None Remove="Images\shows_main.png" />
+    <None Remove="Images\shows_main_hover.png" />
+    <None Remove="Images\turnOff.png" />
+    <None Remove="Images\turnOff_hover.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\background.png" />
+    <Resource Include="Images\books_icon.png" />
+    <Resource Include="Images\books_iconOn.png" />
+    <Resource Include="Images\books_main.png" />
+    <Resource Include="Images\books_main_hover.png" />
+    <Resource Include="Images\movies_icon.png" />
+    <Resource Include="Images\movies_main.png" />
+    <Resource Include="Images\movies_main_hover.png" />
+    <Resource Include="Images\movies_iconOn.png" />
+    <Resource Include="Images\name_main.png" />
+    <Resource Include="Images\shows_icon.png" />
+    <Resource Include="Images\shows_iconOn.png" />
+    <Resource Include="Images\shows_main.png" />
+    <Resource Include="Images\shows_main_hover.png" />
+    <Resource Include="Images\turnOff.png" />
+    <Resource Include="Images\turnOff_hover.png" />
+  </ItemGroup>
+
+</Project>
