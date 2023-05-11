@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Flick_Pages"
         mc:Ignorable="d"
-        Title="Flick &amp; Pages" Height="800" Width="1200" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" MouseLeftButtonDown="dragWindow">
+        Title="Flick &amp; Pages" Height="800" Width="1200" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" MouseLeftButtonDown="DragWindow">
     <Window.Resources>
         <ImageBrush x:Key="turnOff_hover" ImageSource="Images/turnOff_hover.png" Stretch="Uniform"/>
 
@@ -87,7 +87,7 @@
 
             <!-- Main buttons -->
             <StackPanel Orientation="Horizontal" Margin="0 0 10 0" HorizontalAlignment="Right" Grid.ColumnSpan="3">
-                <Button Width="30" Height="30" BorderBrush="{x:Null}" Opacity="0.8" ClickMode="Press" Click="quitButtonClick" Style="{DynamicResource closeButtonStyle}">
+                <Button Width="30" Height="30" BorderBrush="{x:Null}" Opacity="0.8" ClickMode="Press" Click="QuitButtonClick" Style="{DynamicResource closeButtonStyle}">
                     <Button.Background>
                         <ImageBrush ImageSource="Images/turnOff.png" Stretch="Uniform"/>
                     </Button.Background>
@@ -95,15 +95,15 @@
             </StackPanel>
 
             <Image Name="appName" Height="120" Grid.Row="1" Grid.ColumnSpan="3"/>
-            <Image Name="showsButton" Height="90" Grid.Row="2" Grid.ColumnSpan="3" MouseEnter="showsButtonOn" MouseLeave="showsButtonOff"/>
-            <Image Name="moviesButton" Height="100" Grid.Row="3" Grid.ColumnSpan="3" MouseEnter="moviesButtonOn" MouseLeave="moviesButtonOff"/>
-            <Image Name="booksButton" Height="100" Grid.Row="4"  Grid.ColumnSpan="3" MouseEnter="booksButtonOn" MouseLeave="booksButtonOff"/>
+            <Image Name="showsButton" Height="90" Grid.Row="2" Grid.ColumnSpan="3" MouseEnter="ShowsButtonOn" MouseLeave="ShowsButtonOff" MouseDown="ShowsButtonClick"/>
+            <Image Name="moviesButton" Height="100" Grid.Row="3" Grid.ColumnSpan="3" MouseEnter="MoviesButtonOn" MouseLeave="MoviesButtonOff" MouseDown="MoviesButtonClick"/>
+            <Image Name="booksButton" Height="100" Grid.Row="4"  Grid.ColumnSpan="3" MouseEnter="BooksButtonOn" MouseLeave="BooksButtonOff" MouseDown="BooksButtonClick"/>
 
             <!-- Bottom buttons-->
             <Label Grid.Row="5" Grid.Column="0" Content="SAVED:" Foreground="#f2f2f2" FontFamily="#Arial" Opacity="0.4"  Margin="400 140 0 0"/>
-            <Image Name="showsDat" Grid.Row="5" Grid.Column="0" Height="45" Margin="480 120 0 0" Opacity="0.4" MouseEnter="showsDatOn" MouseLeave="showsDatOff"/>
-            <Image Name="moviesDat" Grid.Row="5" Grid.Column="1" Height="45" Margin="0 120 0 0" Opacity="0.4" MouseEnter="moviesDatOn" MouseLeave="moviesDatOff"/>
-            <Image Name="booksDat" Grid.Row="5" Grid.Column="2" Height="45" Margin="0 120 480 0" Opacity="0.4" MouseEnter="booksDatOn" MouseLeave="booksDatOff"/>
+            <Image Name="showsDat" Grid.Row="5" Grid.Column="0" Height="45" Margin="480 120 0 0" Opacity="0.4" MouseEnter="ShowsDatOn" MouseLeave="ShowsDatOff" MouseDown="ShowsDatClick"/>
+            <Image Name="moviesDat" Grid.Row="5" Grid.Column="1" Height="45" Margin="0 120 0 0" Opacity="0.4" MouseEnter="MoviesDatOn" MouseLeave="MoviesDatOff" MouseDown="MoviesDatClick"/>
+            <Image Name="booksDat" Grid.Row="5" Grid.Column="2" Height="45" Margin="0 120 480 0" Opacity="0.4" MouseEnter="BooksDatOn" MouseLeave="BooksDatOff" MouseDown="BooksDatClick"/>
         </Grid>
     </Border>
 </Window>

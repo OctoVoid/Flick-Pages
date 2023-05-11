@@ -21,8 +21,9 @@ namespace Flick_Pages
     public partial class MainWindow : Window
     {
         ImageBrush backgroundImage = new ImageBrush();
-       
 
+        string insertTo = "";
+        string savedData = "";
 
         public MainWindow()
         {
@@ -44,7 +45,29 @@ namespace Flick_Pages
             booksDat.Source = new BitmapImage(new Uri("pack://application:,,,/Images/books_icon.png"));
         }
 
-        private void dragWindow(object sender, MouseButtonEventArgs e)
+        // WINDOWS AddShows - AddMovies - AddBooks
+        private void AddWindows()
+        {
+            switch (insertTo)
+            {
+                case "shows":
+                    AddShow addShow = new AddShow();
+                    addShow.Show();
+                    break;
+
+                case "movies":
+                    AddMovie addMovie = new AddMovie();
+                    addMovie.Show();
+                    break;
+
+                case "books":
+                    AddBook addBook = new AddBook();
+                    addBook.Show();
+                    break;
+            }
+        }
+
+        private void DragWindow(object sender, MouseButtonEventArgs e)
         {
             try
             {
@@ -56,71 +79,98 @@ namespace Flick_Pages
             }
         }
 
-        private void quitButtonClick(object sender, RoutedEventArgs e)
+        private void QuitButtonClick(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
         }
 
         // SHOWS
-        private void showsButtonOn(object sender, MouseEventArgs e)
+        private void ShowsButtonOn(object sender, MouseEventArgs e)
         {
             showsButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/shows_main_hover.png"));
         }
-        private void showsButtonOff(object sender, MouseEventArgs e)
+        private void ShowsButtonOff(object sender, MouseEventArgs e)
         {
             showsButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/shows_main.png"));
         }
+        private void ShowsButtonClick(object sender, MouseButtonEventArgs e)    // insert show
+        {
+            insertTo = "shows";
+            AddWindows();
+        }
 
         // MOVIES
-        private void moviesButtonOn(object sender, MouseEventArgs e)
+        private void MoviesButtonOn(object sender, MouseEventArgs e)
         {
             moviesButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/movies_main_hover.png"));
         }
-        private void moviesButtonOff(object sender, MouseEventArgs e)
+        private void MoviesButtonOff(object sender, MouseEventArgs e)
         {
             moviesButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/movies_main.png"));
         }
+        private void MoviesButtonClick(object sender, MouseButtonEventArgs e)   // insert movie
+        {
+            insertTo = "movies";
+            AddWindows();
+        }
 
         // BOOKS
-        private void booksButtonOn(object sender, MouseEventArgs e)
+        private void BooksButtonOn(object sender, MouseEventArgs e)
         {
             booksButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/books_main_hover.png"));
         }
-        private void booksButtonOff(object sender, MouseEventArgs e)
+        private void BooksButtonOff(object sender, MouseEventArgs e)
         {
             booksButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/books_main.png"));
         }
+        private void BooksButtonClick(object sender, MouseButtonEventArgs e)    // insert book
+        {
+            insertTo = "books";
+            AddWindows();
+        }
 
         // shows
-        private void showsDatOn(object sender, MouseEventArgs e)
+        private void ShowsDatOn(object sender, MouseEventArgs e)
         {
             showsDat.Source = new BitmapImage(new Uri("pack://application:,,,/Images/shows_iconOn.png"));
         }
-        private void showsDatOff(object sender, MouseEventArgs e)
+        private void ShowsDatOff(object sender, MouseEventArgs e)
         {
             showsDat.Source = new BitmapImage(new Uri("pack://application:,,,/Images/shows_icon.png"));
         }
+        private void ShowsDatClick(object sender, MouseButtonEventArgs e)  // saved shows data
+        {
+            savedData = "shows";
+        }
 
         // movies
-        private void moviesDatOn(object sender, MouseEventArgs e)
+        private void MoviesDatOn(object sender, MouseEventArgs e)
         {
             moviesDat.Source = new BitmapImage(new Uri("pack://application:,,,/Images/movies_iconOn.png"));
         }
-        private void moviesDatOff(object sender, MouseEventArgs e)
+        private void MoviesDatOff(object sender, MouseEventArgs e)
         {
             moviesDat.Source = new BitmapImage(new Uri("pack://application:,,,/Images/movies_icon.png"));
         }
+        private void MoviesDatClick(object sender, MouseButtonEventArgs e)  // saved movies data
+        {
+            savedData = "movies";
+        }
 
         // books
-        private void booksDatOn(object sender, MouseEventArgs e)
+        private void BooksDatOn(object sender, MouseEventArgs e)
         {
             booksDat.Source = new BitmapImage(new Uri("pack://application:,,,/Images/books_iconOn.png"));
         }
-        private void booksDatOff(object sender, MouseEventArgs e)
+        private void BooksDatOff(object sender, MouseEventArgs e)
         {
             booksDat.Source = new BitmapImage(new Uri("pack://application:,,,/Images/books_icon.png"));
         }
+        private void BooksDatClick(object sender, MouseButtonEventArgs e)   // saved books data
+        {
+            savedData = "books";
+        }
 
-        
+
     }
 }
