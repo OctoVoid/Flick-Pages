@@ -5,10 +5,84 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Flick_Pages"
         mc:Ignorable="d"
-        Title="Flick &amp; Pages" Height="800" Width="1200" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" MouseLeftButtonDown="DragWindow">
-    <Border CornerRadius="15" Background="#333333" >
-        <Grid>
+        Title="AddBook" Height="800" Width="1200" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="{x:Null}" MouseLeftButtonDown="DragWindow">
+    <Border CornerRadius="15" Background="#333333" BorderBrush="#303030" BorderThickness="1" >
+        <Grid Name="backgroundAddBook" Margin="10 10 10 10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- FORM LABELS -->
+            <Image Name="closeButton" Grid.Row="0" Grid.Column="3" Height="30" Width="30" MouseDown="CloseClick" MouseEnter="CloseButtonOn" MouseLeave="CloseButtonOff"/>
+            <TextBlock Text="Title :" Margin="10" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="WhiteSmoke" FontSize="25" FontFamily="Verdana"/>
+            <TextBlock Text="Author :" Margin="10" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="WhiteSmoke" FontSize="25" FontFamily="Verdana"/>
+            <TextBlock Text="Literary Genre :" Margin="10" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="WhiteSmoke" FontSize="25" FontFamily="Verdana"/>
+            <TextBlock Text="Release Year :"  Margin="10" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="WhiteSmoke" FontSize="25" FontFamily="Verdana"/>
+            <TextBlock Text="Pages :"  Margin="10" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="WhiteSmoke" FontSize="25" FontFamily="Verdana"/>
+            <TextBlock Text="Language :"  Margin="10" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="WhiteSmoke" FontSize="25" FontFamily="Verdana"/>
+            <TextBlock Text="My Rating :"  Margin="10" Grid.Row="8" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="WhiteSmoke" FontSize="25" FontFamily="Verdana"/>
+            <TextBlock Text="/ 10"  Margin="70 10 10 10" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="WhiteSmoke" FontSize="25" FontFamily="Verdana"/>
 
+            <!-- FORM LABELS -->
+            <TextBox Grid.Row="2" Grid.Column="1" Height="30" Grid.ColumnSpan="2" Background="DarkGray" BorderBrush="DimGray" BorderThickness="2" Padding="2" FontSize="20"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Height="30" Grid.ColumnSpan="2" Background="DarkGray" BorderBrush="DimGray" BorderThickness="2" Padding="2" FontSize="20"/>
+            <ComboBox SelectedIndex="0" Grid.Row="4" Grid.Column="1" Height="30" Background="DarkGray" BorderBrush="DimGray" BorderThickness="2" Padding="2" FontSize="20">
+                <ComboBoxItem></ComboBoxItem>
+                <ComboBoxItem>Action and Adventure</ComboBoxItem>
+                <ComboBoxItem>Classic</ComboBoxItem>
+                <ComboBoxItem>Comic Book or Graphic Novel</ComboBoxItem>
+                <ComboBoxItem>Detective and Mystery</ComboBoxItem>
+                <ComboBoxItem>Fantasy</ComboBoxItem>
+                <ComboBoxItem>Historical Fiction</ComboBoxItem>
+                <ComboBoxItem>Horror</ComboBoxItem>
+                <ComboBoxItem>Literary Fiction</ComboBoxItem>
+                <ComboBoxItem>Romance</ComboBoxItem>
+                <ComboBoxItem>Science Fiction</ComboBoxItem>
+                <ComboBoxItem>Short Stories</ComboBoxItem>
+                <ComboBoxItem>Suspense and Thrillers</ComboBoxItem>
+                <ComboBoxItem>Women's Fiction</ComboBoxItem>
+                <ComboBoxItem>Biographies and Autobiographies</ComboBoxItem>
+                <ComboBoxItem>Cookbooks</ComboBoxItem>
+                <ComboBoxItem>Essays</ComboBoxItem>
+                <ComboBoxItem>History</ComboBoxItem>
+                <ComboBoxItem>Memoir</ComboBoxItem>
+                <ComboBoxItem>Poetry</ComboBoxItem>
+                <ComboBoxItem>Self-Help</ComboBoxItem>
+                <ComboBoxItem>True Crime</ComboBoxItem>
+            </ComboBox>
+            <TextBox Grid.Row="5" Grid.Column="1" Height="30" Margin="0 10 200 10" Background="DarkGray" BorderBrush="DimGray" BorderThickness="2" Padding="2" FontSize="20"/>
+            <TextBox Grid.Row="6" Grid.Column="1" Height="30" Margin="0 10 200 10" Background="DarkGray" BorderBrush="DimGray" BorderThickness="2" Padding="2" FontSize="20"/>
+            <TextBox Grid.Row="7" Grid.Column="1" Height="30" Margin="0 10 200 10" Background="DarkGray" BorderBrush="DimGray" BorderThickness="2" Padding="2" FontSize="20"/>
+            <ComboBox SelectedIndex="0"  Grid.Row="8" Grid.Column="1" Height="30" Width="60" HorizontalAlignment="Left" Background="DarkGray" BorderBrush="DimGray" BorderThickness="2" Padding="2" FontSize="20">
+                <ComboBoxItem></ComboBoxItem>
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+                <ComboBoxItem>7</ComboBoxItem>
+                <ComboBoxItem>8</ComboBoxItem>
+                <ComboBoxItem>9</ComboBoxItem>
+                <ComboBoxItem>10</ComboBoxItem>
+            </ComboBox>
+            
         </Grid>
     </Border>
 </Window>

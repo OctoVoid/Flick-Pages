@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Flick_Pages"
         mc:Ignorable="d"
-        Title="Flick &amp; Pages" Height="800" Width="1200" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" MouseLeftButtonDown="DragWindow">
-    <Border CornerRadius="15" Background="#333333" >
-        <Grid>
+        Title="AddShow" Height="800" Width="1200" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="{x:Null}" MouseLeftButtonDown="DragWindow">
+    <Border CornerRadius="15" Background="#333333" BorderBrush="#303030" BorderThickness="1" >
+        <Grid Name="backgroundAddShow" Margin="10 10 10 10">
 
         </Grid>
     </Border>

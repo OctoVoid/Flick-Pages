@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Flick_Pages"
         mc:Ignorable="d"
-        Title="Flick &amp; Pages" Height="800" Width="1200" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" MouseLeftButtonDown="DragWindow">
+        Title="Flick &amp; Pages" Height="800" Width="1200" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="{x:Null}" MouseLeftButtonDown="DragWindow">
     <Window.Resources>
         <ImageBrush x:Key="turnOff_hover" ImageSource="Images/turnOff_hover.png" Stretch="Uniform"/>
 

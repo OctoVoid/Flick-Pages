@@ -10,15 +10,29 @@
 
   <ItemGroup>
     <None Remove="Images\background.png" />
+    <None Remove="Images\bookBackground.png" />
+    <None Remove="Images\booksDataView.png" />
     <None Remove="Images\books_icon.png" />
     <None Remove="Images\books_iconOn.png" />
     <None Remove="Images\books_main.png" />
     <None Remove="Images\books_main_hover.png" />
+    <None Remove="Images\closeButton.png" />
+    <None Remove="Images\closeButtonOn.png" />
+    <None Remove="Images\deleteButton.png" />
+    <None Remove="Images\deleteButtonOn.png" />
+    <None Remove="Images\doneButton.png" />
+    <None Remove="Images\doneButtonOn.png" />
+    <None Remove="Images\exportButton.png" />
+    <None Remove="Images\exportButtonOn.png" />
+    <None Remove="Images\movieBackground.png" />
+    <None Remove="Images\moviesDataView.png" />
     <None Remove="Images\movies_icon.png" />
     <None Remove="Images\movies_iconOn.png" />
     <None Remove="Images\movies_main.png" />
     <None Remove="Images\movies_main_hover.png" />
     <None Remove="Images\name_main.png" />
+    <None Remove="Images\showBackground.png" />
+    <None Remove="Images\showsDataView.png" />
     <None Remove="Images\shows_icon.png" />
     <None Remove="Images\shows_iconOn.png" />
     <None Remove="Images\shows_main.png" />
@@ -29,15 +43,29 @@
 
   <ItemGroup>
     <Resource Include="Images\background.png" />
+    <Resource Include="Images\bookBackground.png" />
+    <Resource Include="Images\booksDataView.png" />
     <Resource Include="Images\books_icon.png" />
     <Resource Include="Images\books_iconOn.png" />
     <Resource Include="Images\books_main.png" />
     <Resource Include="Images\books_main_hover.png" />
+    <Resource Include="Images\closeButton.png" />
+    <Resource Include="Images\closeButtonOn.png" />
+    <Resource Include="Images\deleteButton.png" />
+    <Resource Include="Images\deleteButtonOn.png" />
+    <Resource Include="Images\doneButton.png" />
+    <Resource Include="Images\doneButtonOn.png" />
+    <Resource Include="Images\exportButton.png" />
+    <Resource Include="Images\exportButtonOn.png" />
+    <Resource Include="Images\movieBackground.png" />
+    <Resource Include="Images\moviesDataView.png" />
     <Resource Include="Images\movies_icon.png" />
     <Resource Include="Images\movies_main.png" />
     <Resource Include="Images\movies_main_hover.png" />
     <Resource Include="Images\movies_iconOn.png" />
     <Resource Include="Images\name_main.png" />
+    <Resource Include="Images\showBackground.png" />
+    <Resource Include="Images\showsDataView.png" />
     <Resource Include="Images\shows_icon.png" />
     <Resource Include="Images\shows_iconOn.png" />
     <Resource Include="Images\shows_main.png" />

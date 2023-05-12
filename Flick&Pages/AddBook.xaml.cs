@@ -19,9 +19,17 @@ namespace Flick_Pages
     /// </summary>
     public partial class AddBook : Window
     {
+        ImageBrush backgroundBook = new ImageBrush();
+
+
         public AddBook()
         {
             InitializeComponent();
+
+            backgroundBook.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/bookBackground.png"));
+            backgroundAddBook.Background = backgroundBook;
+
+            closeButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/closeButton.png"));
         }
 
         private void DragWindow(object sender, MouseButtonEventArgs e)
@@ -35,6 +43,23 @@ namespace Flick_Pages
                 //throw;
             }
         }
+
+    // CLOSE button
+        private void CloseClick(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
+        private void CloseButtonOn(object sender, MouseEventArgs e)
+        {
+            closeButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/closeButtonOn.png"));
+        }
+        private void CloseButtonOff(object sender, MouseEventArgs e)
+        {
+            closeButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/closeButton.png"));
+        }
+
+
     }
+
 
 }

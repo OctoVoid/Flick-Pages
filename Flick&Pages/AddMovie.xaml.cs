@@ -19,9 +19,14 @@ namespace Flick_Pages
     /// </summary>
     public partial class AddMovie : Window
     {
+        ImageBrush backgroundMovie = new ImageBrush();
+
         public AddMovie()
         {
             InitializeComponent();
+
+            backgroundMovie.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/movieBackground.png"));
+            backgroundAddMovie.Background = backgroundMovie;
         }
 
         private void DragWindow(object sender, MouseButtonEventArgs e)

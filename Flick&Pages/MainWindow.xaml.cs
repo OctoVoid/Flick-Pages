@@ -21,9 +21,8 @@ namespace Flick_Pages
     public partial class MainWindow : Window
     {
         ImageBrush backgroundImage = new ImageBrush();
-
-        string insertTo = "";
-        string savedData = "";
+        
+        KeyWords dataType;
 
         public MainWindow()
         {
@@ -31,7 +30,7 @@ namespace Flick_Pages
 
             backgroundImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/background.png"));
             MainBackground.Background = backgroundImage;
-            MainBackground.Background.Opacity = 0.4;
+            MainBackground.Background.Opacity = 0.25;
 
          // BUTTONS
             appName.Source = new BitmapImage(new Uri("pack://application:,,,/Images/name_main.png"));
@@ -48,21 +47,21 @@ namespace Flick_Pages
         // WINDOWS AddShows - AddMovies - AddBooks
         private void AddWindows()
         {
-            switch (insertTo)
+            switch (dataType)
             {
-                case "shows":
+                case KeyWords.shows:
                     AddShow addShow = new AddShow();
-                    addShow.Show();
+                    addShow.ShowDialog();
                     break;
 
-                case "movies":
+                case KeyWords.movies:
                     AddMovie addMovie = new AddMovie();
-                    addMovie.Show();
+                    addMovie.ShowDialog();
                     break;
 
-                case "books":
+                case KeyWords.books:
                     AddBook addBook = new AddBook();
-                    addBook.Show();
+                    addBook.ShowDialog();
                     break;
             }
         }
@@ -95,7 +94,7 @@ namespace Flick_Pages
         }
         private void ShowsButtonClick(object sender, MouseButtonEventArgs e)    // insert show
         {
-            insertTo = "shows";
+            dataType = KeyWords.shows;
             AddWindows();
         }
 
@@ -110,7 +109,7 @@ namespace Flick_Pages
         }
         private void MoviesButtonClick(object sender, MouseButtonEventArgs e)   // insert movie
         {
-            insertTo = "movies";
+            dataType = KeyWords.movies;
             AddWindows();
         }
 
@@ -125,7 +124,7 @@ namespace Flick_Pages
         }
         private void BooksButtonClick(object sender, MouseButtonEventArgs e)    // insert book
         {
-            insertTo = "books";
+            dataType = KeyWords.books;
             AddWindows();
         }
 
@@ -140,7 +139,9 @@ namespace Flick_Pages
         }
         private void ShowsDatClick(object sender, MouseButtonEventArgs e)  // saved shows data
         {
-            savedData = "shows";
+            dataType = KeyWords.shows;
+            DatabaseView databaseView = new DatabaseView(dataType);
+            databaseView.ShowDialog();
         }
 
         // movies
@@ -154,7 +155,9 @@ namespace Flick_Pages
         }
         private void MoviesDatClick(object sender, MouseButtonEventArgs e)  // saved movies data
         {
-            savedData = "movies";
+            dataType = KeyWords.movies;
+            DatabaseView databaseView = new DatabaseView(dataType);
+            databaseView.ShowDialog();
         }
 
         // books
@@ -168,7 +171,9 @@ namespace Flick_Pages
         }
         private void BooksDatClick(object sender, MouseButtonEventArgs e)   // saved books data
         {
-            savedData = "books";
+            dataType = KeyWords.books;
+            DatabaseView databaseView = new DatabaseView(dataType);
+            databaseView.ShowDialog();
         }
 
 

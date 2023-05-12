@@ -19,9 +19,15 @@ namespace Flick_Pages
     /// </summary>
     public partial class AddShow : Window
     {
+        ImageBrush backgroundShow = new ImageBrush();
+
+
         public AddShow()
         {
             InitializeComponent();
+
+            backgroundShow.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/showBackground.png"));
+            backgroundAddShow.Background = backgroundShow;
         }
 
         private void DragWindow(object sender, MouseButtonEventArgs e)
