@@ -30,6 +30,7 @@ namespace Flick_Pages
             backgroundAddBook.Background = backgroundBook;
 
             closeButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/closeButton.png"));
+            saveButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/saveButton.png"));
         }
 
         private void DragWindow(object sender, MouseButtonEventArgs e)
@@ -58,7 +59,19 @@ namespace Flick_Pages
             closeButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/closeButton.png"));
         }
 
+    // SAVE button
+        private void saveButtonClick(object sender, MouseButtonEventArgs e)
+        {
 
+        }
+        private void saveButtonOn(object sender, MouseEventArgs e)
+        {
+            saveButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/saveButtonOn.png"));
+        }
+        private void saveButtonOff(object sender, MouseEventArgs e)
+        {
+            saveButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/saveButton.png"));
+        }
     }
 
 

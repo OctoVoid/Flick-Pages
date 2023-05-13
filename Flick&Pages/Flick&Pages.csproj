@@ -31,6 +31,8 @@
     <None Remove="Images\movies_main.png" />
     <None Remove="Images\movies_main_hover.png" />
     <None Remove="Images\name_main.png" />
+    <None Remove="Images\saveButton.png" />
+    <None Remove="Images\saveButtonOn.png" />
     <None Remove="Images\showBackground.png" />
     <None Remove="Images\showsDataView.png" />
     <None Remove="Images\shows_icon.png" />
@@ -64,6 +66,8 @@
     <Resource Include="Images\movies_main_hover.png" />
     <Resource Include="Images\movies_iconOn.png" />
     <Resource Include="Images\name_main.png" />
+    <Resource Include="Images\saveButton.png" />
+    <Resource Include="Images\saveButtonOn.png" />
     <Resource Include="Images\showBackground.png" />
     <Resource Include="Images\showsDataView.png" />
     <Resource Include="Images\shows_icon.png" />
