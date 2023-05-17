@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Flick_Pages
 {
     /// <summary>
@@ -158,6 +159,11 @@ namespace Flick_Pages
             dataType = KeyWords.movies;
             DatabaseView databaseView = new DatabaseView(dataType);
             databaseView.ShowDialog();
+
+            using (MyDatabaseContent content = new MyDatabaseContent())
+            {
+
+            }
         }
 
         // books

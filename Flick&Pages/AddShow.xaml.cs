@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+
 
 namespace Flick_Pages
 {
@@ -45,7 +47,7 @@ namespace Flick_Pages
             }
         }
 
-    // CLOSE button
+        // CLOSE button
         private void CloseClick(object sender, MouseButtonEventArgs e)
         {
             this.Close();
@@ -59,10 +61,49 @@ namespace Flick_Pages
             closeButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/closeButton.png"));
         }
 
-    // SAVE button
+        // SAVE button
         private void saveButtonClick(object sender, MouseButtonEventArgs e)
         {
+            using (MyDatabaseContent content = new MyDatabaseContent())     //ADD TRY CATCH
+            {
+                var title = titleBox.Text;
+                var genre = genreBox.Text;
+                var language = languageBox.Text;
 
+                var season = 0;
+                try { season = Convert.ToInt32(yearBox.Text); }
+                catch (Exception) { season = 0; }
+                 
+                var year = 0;
+                try { year = Convert.ToInt32(yearBox.Text); }
+                catch (Exception) { year = 0; }
+
+                var rating = 0;
+                try { rating = Convert.ToInt32(ratingBox.Text); }
+                catch (Exception){}
+
+                if (title != null && year != 0 && rating != 0)
+                {
+                    content.Shows.Add(new Show() { Title = title, Year = year, Genre = genre, Language = language, Season = season, Rating = rating });
+                    content.SaveChanges();
+
+                    titleBox.Clear();
+                    yearBox.Clear();
+                    genreBox.SelectedItem = null;
+                    languageBox.Clear();
+                    seasonsBox.Clear();
+                    ratingBox.SelectedItem = null;
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("           ಠ__ಠ" +
+                                "\n        Press OK!");
+
+                    MessageBox.Show("You did not fill the requested items *");
+                }
+            }
         }
         private void saveButtonOn(object sender, MouseEventArgs e)
         {

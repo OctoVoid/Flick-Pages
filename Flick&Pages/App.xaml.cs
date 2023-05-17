@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Flick_Pages
 {
@@ -13,5 +14,10 @@ namespace Flick_Pages
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            DatabaseFacade facade = new DatabaseFacade(new MyDatabaseContent());
+            facade.EnsureCreated();
+        }
     }
 }

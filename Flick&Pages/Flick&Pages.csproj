@@ -41,6 +41,12 @@
     <None Remove="Images\shows_main_hover.png" />
     <None Remove="Images\turnOff.png" />
     <None Remove="Images\turnOff_hover.png" />
+    <None Remove="shows_movies_books_Db.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.5" />
   </ItemGroup>
 
   <ItemGroup>

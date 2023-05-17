@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace Flick_Pages
 {
     /// <summary>
@@ -44,7 +45,7 @@ namespace Flick_Pages
             }
         }
 
-    // CLOSE button
+        // CLOSE button
         private void CloseClick(object sender, MouseButtonEventArgs e)
         {
             this.Close();
@@ -58,11 +59,51 @@ namespace Flick_Pages
             closeButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/closeButton.png"));
         }
 
-    // SAVE button
+        // SAVE button
         private void saveButtonClick(object sender, MouseButtonEventArgs e)
         {
+            using (MyDatabaseContent content = new MyDatabaseContent())     //ADD TRY CATCH
+            {
+                var title = titleBox.Text;
+                var genre = genreBox.Text;
+                var language = languageBox.Text;
 
+                var runtime = 0;
+                try { runtime = Convert.ToInt32(runtimeBox.Text); }
+                catch (Exception) { runtime = 0; }
+
+                var year = 0;
+                try { year = Convert.ToInt32(yearBox.Text); }
+                catch (Exception) { year = 0; }
+
+                var rating = 0;
+                try { rating = Convert.ToInt32(ratingBox.Text); }
+                catch (Exception){}
+
+                if (title != null && year != 0 && rating != 0)
+                {
+                    content.Movies.Add(new Movie() { Title = title, Year = year, Genre = genre, Runtime = runtime, Language = language, Rating = rating });
+                    content.SaveChanges();
+
+                    titleBox.Clear();
+                    yearBox.Clear();
+                    genreBox.SelectedItem = null;
+                    runtimeBox.Clear();
+                    languageBox.Clear();
+                    ratingBox.SelectedItem = null;
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("           ಠ__ಠ" +
+                                "\n        Press OK!");
+
+                    MessageBox.Show("You did not fill the requested items *");
+                }
+            }
         }
+
         private void saveButtonOn(object sender, MouseEventArgs e)
         {
             saveButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/saveButtonOn.png"));
