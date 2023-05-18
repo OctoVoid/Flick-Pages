@@ -40,7 +40,6 @@ namespace Flick_Pages
             DatabaseViewBackground.Background.Opacity = 0.4;
 
             closeButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/closeButton.png"));
-            exportButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/exportButton.png"));
             deleteButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/deleteButton.png"));
         }
 
@@ -110,21 +109,6 @@ namespace Flick_Pages
         private void CloseButtonOff(object sender, MouseEventArgs e)
         {
             closeButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/closeButton.png"));
-        }
-
-        // EXPORT button 
-        private void ExportClick(object sender, MouseButtonEventArgs e)  // EXPORT - Export to .doc
-        {
-
-        }
-        private void ExportButtonOn(object sender, MouseEventArgs e)
-        {
-            exportButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/exportButtonOn.png"));
-        }
-
-        private void ExportButtonOff(object sender, MouseEventArgs e)
-        {
-            exportButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/exportButton.png"));
         }
 
         // DELETE button
