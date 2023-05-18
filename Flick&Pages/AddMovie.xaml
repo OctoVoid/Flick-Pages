@@ -213,7 +213,6 @@
                 <ComboBoxItem>10</ComboBoxItem>
             </ComboBox>
             <Image Name="saveButton" Grid.Column="2" Grid.Row="9" Height="40" Width="auto" VerticalAlignment="Center" HorizontalAlignment="Right" MouseDown="saveButtonClick" MouseEnter="saveButtonOn" MouseLeave="saveButtonOff"/>
-
         </Grid>
     </Border>
 </Window>

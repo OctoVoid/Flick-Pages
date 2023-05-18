@@ -23,7 +23,6 @@ namespace Flick_Pages
     {
         ImageBrush backgroundBook = new ImageBrush();
 
-
         public AddBook()
         {
             InitializeComponent();
@@ -100,16 +99,10 @@ namespace Flick_Pages
                 }
                 else
                 {
-                    MessageBox.Show("           ಠ__ಠ" +
-                                "\n        Press OK!");
-
-                    MessageBox.Show("You did not fill the requested items *");
+                    MessageBox.Show("                ಠ__ಠ" +
+                                "\nFill the requested items!");
                 }
-
             }
-
-
-
         }
         private void saveButtonOn(object sender, MouseEventArgs e)
         {
@@ -119,9 +112,5 @@ namespace Flick_Pages
         {
             saveButton.Source = new BitmapImage(new Uri("pack://application:,,,/Images/saveButton.png"));
         }
-
-
     }
-
-
 }

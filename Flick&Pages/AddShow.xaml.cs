@@ -23,7 +23,6 @@ namespace Flick_Pages
     {
         ImageBrush backgroundShow = new ImageBrush();
 
-
         public AddShow()
         {
             InitializeComponent();
@@ -98,10 +97,8 @@ namespace Flick_Pages
                 }
                 else
                 {
-                    MessageBox.Show("           ಠ__ಠ" +
-                                "\n        Press OK!");
-
-                    MessageBox.Show("You did not fill the requested items *");
+                    MessageBox.Show("                ಠ__ಠ" +
+                                "\nFill the requested items!");
                 }
             }
         }

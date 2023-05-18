@@ -146,7 +146,6 @@ namespace Flick_Pages
         {
             using (MyDatabaseContent content = new MyDatabaseContent())
             {
-
                 Show selectedShow = dataShowsTable.SelectedItem as Show;
                 Movie selectedMovie = dataMoviesTable.SelectedItem as Movie;
                 Book selectedBook = dataBooksTable.SelectedItem as Book;

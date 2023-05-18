@@ -4,8 +4,6 @@
              xmlns:local="clr-namespace:Flick_Pages"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
     </Application.Resources>
-    
 </Application>
 

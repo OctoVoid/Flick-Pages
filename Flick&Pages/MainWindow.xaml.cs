@@ -159,11 +159,6 @@ namespace Flick_Pages
             dataType = KeyWords.movies;
             DatabaseView databaseView = new DatabaseView(dataType);
             databaseView.ShowDialog();
-
-            using (MyDatabaseContent content = new MyDatabaseContent())
-            {
-
-            }
         }
 
         // books
@@ -181,7 +176,5 @@ namespace Flick_Pages
             DatabaseView databaseView = new DatabaseView(dataType);
             databaseView.ShowDialog();
         }
-
-
     }
 }

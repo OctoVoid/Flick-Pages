@@ -80,7 +80,6 @@
             </Grid.ColumnDefinitions>
             <!-- CONTENT OF A GRID -->
             <Image Name="closeButton" Grid.Row="0" Grid.Column="2" Height="30" Width="30" MouseDown="CloseClick" MouseEnter="CloseButtonOn" MouseLeave="CloseButtonOff"/>
-
             <ListView Name="dataShowsTable" Margin="0,0,0,0" Grid.Row="1" Grid.Column="1" Visibility="Hidden">
                 <ListView.View>
                     <GridView>
