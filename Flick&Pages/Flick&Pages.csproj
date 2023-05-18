@@ -22,8 +22,6 @@
     <None Remove="Images\deleteButtonOn.png" />
     <None Remove="Images\doneButton.png" />
     <None Remove="Images\doneButtonOn.png" />
-    <None Remove="Images\exportButton.png" />
-    <None Remove="Images\exportButtonOn.png" />
     <None Remove="Images\movieBackground.png" />
     <None Remove="Images\moviesDataView.png" />
     <None Remove="Images\movies_icon.png" />
@@ -63,8 +61,6 @@
     <Resource Include="Images\deleteButtonOn.png" />
     <Resource Include="Images\doneButton.png" />
     <Resource Include="Images\doneButtonOn.png" />
-    <Resource Include="Images\exportButton.png" />
-    <Resource Include="Images\exportButtonOn.png" />
     <Resource Include="Images\movieBackground.png" />
     <Resource Include="Images\moviesDataView.png" />
     <Resource Include="Images\movies_icon.png" />
